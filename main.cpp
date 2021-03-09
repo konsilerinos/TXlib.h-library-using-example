@@ -1,4 +1,4 @@
-#include <TXLib.h>
+Ôªø#include <TXLib.h>
 
 namespace parade {
 
@@ -134,7 +134,7 @@ namespace parade {
 				void BuildDrawText() {
 					txSetColor(RGB(106, 53, 37));
 					txSelectFont("Verdana", 40, 25, false, false, false, false, 0);
-					txDrawText(806, 555, 1009, 591, "À≈Õ»Õ");
+					txDrawText(806, 555, 1009, 591, "–õ–ï–ù–ò–ù");
 				}
 			}
 			namespace tower {
@@ -246,7 +246,7 @@ namespace parade {
 
 				txSetColor(TX_WHITE);
 				txSelectFont("Verdana", 40);
-				txDrawText(203, 721, 290, 757, "√¿«");
+				txDrawText(203, 721, 290, 757, "–ì–ê–ó");
 			}
 		}
 		namespace bm_13 {
@@ -363,7 +363,7 @@ namespace parade {
 			void CarDrawText() {
 				txSetColor(TX_WHITE);
 				txSelectFont("Verdana", 40);
-				txDrawText(1227, 726, 1314, 762, "¡Ã-13");
+				txDrawText(1227, 726, 1314, 762, "–ë–ú-13");
 
 			}
 		}
@@ -454,7 +454,7 @@ namespace parade {
 
 				txSetColor(TX_WHITE);
 				txSelectFont("Verdana", 40, 0, false, true, false, false, 0);
-				txDrawText(344, 60, 469, 96, "–Ó‰ËÌ‡");
+				txDrawText(344, 60, 469, 96, "–†–æ–¥–∏–Ω–∞");
 			}
 		}
 		namespace ba_3 {
@@ -505,7 +505,7 @@ namespace parade {
 			void CarDrawText() {
 				txSetColor(TX_WHITE);
 				txSelectFont("Verdana", 40);
-				txDrawText(1543, 121, 1687, 158, "¡¿-3");
+				txDrawText(1543, 121, 1687, 158, "–ë–ê-3");
 
 			}
 		}
