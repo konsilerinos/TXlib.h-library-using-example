@@ -1,5 +1,4 @@
 ﻿#include <TXLib.h>
-#include <Windows.h>
 
 namespace parade {
 
