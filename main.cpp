@@ -66,6 +66,7 @@ namespace parade {
 		}
 
 		void CreateEnvironment() {
+
 			aux_fun::CreateSky();
 			aux_fun::CreateWall();
 			aux_fun::CreateRoad();
@@ -150,6 +151,7 @@ namespace parade {
 					txRectangle(966, 356, 987, 314);
 				}
 				void BuildDrawText() {
+
 					txSetColor(RGB(106, 53, 37));
 					txSelectFont("Verdana", 40, 25, false, false, false, false, 0);
 					txDrawText(806, 555, 1009, 591, "ЛЕНИН");
@@ -160,7 +162,10 @@ namespace parade {
 				void BuildWireframe() {
 
 					parade::aux_fun::SetShapeColor(106, 53, 37);
-					POINT tower_low[] = { {793, 356}, {793, 259}, {777, 229}, {777, 184}, {1055, 184}, {1055, 229}, {1039, 259}, {1039, 356} };
+					POINT tower_low[] = { 
+						{793, 356}, {793, 259}, {777, 229}, {777, 184}, {1055, 184}, 
+						{1055, 229}, {1039, 259}, {1039, 356} 
+					};
 					txPolygon(tower_low, 8);
 
 					parade::aux_fun::SetShapeColor(129, 74, 54);
@@ -182,6 +187,7 @@ namespace parade {
 		}
 
 		void BuildMausoleum() {
+
 			aux_fun::mausoleum::LayFoundation();
 			aux_fun::mausoleum::BuildArch();
 			aux_fun::mausoleum::BricksOnArch();
@@ -194,6 +200,7 @@ namespace parade {
 			aux_fun::mausoleum::BuildDrawText();
 		}
 		void BuildTower() {
+
 			aux_fun::tower::BuildWireframe();
 			aux_fun::tower::BuildWindows();
 			aux_fun::tower::BuildRoof();
@@ -274,6 +281,7 @@ namespace parade {
 			const int y0 = 884;
 
 			void ChangeCoordinates(int& x, int& y) {
+
 				x = x - x0;
 				y = y - y0;
 			}
@@ -341,6 +349,7 @@ namespace parade {
 				txRectangle(x + 201, y + 700, x + 289, y + 648);
 			}
 			void CarDrawText(int x, int y) {
+
 				txSetColor(RGB(224, 224, 224));
 				txSelectFont("Verdana", 40, 0, false, false, false, false, 0);
 				txDrawText(x + 326, y + 556, x + 662, y + 682, "Отстоим Москву!");
@@ -352,6 +361,7 @@ namespace parade {
 			const int y0 = 885;
 
 			void ChangeCoordinates(int& x, int& y) {
+
 				x = x - x0;
 				y = y - y0;
 			}
@@ -473,10 +483,10 @@ namespace parade {
 				txPolygon(bullet_2, 5);
 			}
 			void CarDrawText(int x, int y) {
+
 				txSetColor(RGB(224, 224, 224));
 				txSelectFont("Verdana", 30, 0, false, true, false, false, 0);
 				txDrawText(x + 1074, y + 726, x + 1299, y + 759, "Бей фашистов!");
-
 			}
 		}
 		namespace t_34 {
