@@ -2,15 +2,13 @@
 
 namespace parade {
 
-	enum Camouflage {
+	enum сamouflage {
 
 		SUMMER,
 		WINTER
 	};
 
 	namespace aux_fun {
-
-		enum Color{};
 
 		void SetShapeColor(int x, int y, int z) {
 
@@ -324,9 +322,9 @@ namespace parade {
 					int textColor = 0;
 				};
 
-				namespace Camouflage {
+				namespace camouflage {
 
-					namespace Summer {
+					namespace summer {
 
 						enum First {
 
@@ -343,7 +341,7 @@ namespace parade {
 						};
 					}
 
-					namespace Winter {
+					namespace winter {
 
 						enum First {
 
@@ -366,33 +364,33 @@ namespace parade {
 				const int x0 = 93;
 				const int y0 = 884;
 
-				void SetCurrentCamouflage(parade::Camouflage camouflageStatus) {
+				void SetCurrentCamouflage(parade::сamouflage camouflageStatus) {
 
-					if (camouflageStatus == parade::Camouflage::SUMMER) {
+					if (camouflageStatus == parade::сamouflage::SUMMER) {
 
-						currentCamouflage.awningColor   = Camouflage::Summer::First::AWNING;
-						currentCamouflage.boardColor    = Camouflage::Summer::First::BOARD;
-						currentCamouflage.cabColor      = Camouflage::Summer::First::CAB;
-						currentCamouflage.frameColor    = Camouflage::Summer::First::FRAME;
-						currentCamouflage.frontEndColor = Camouflage::Summer::First::FRONT_END;
-						currentCamouflage.gimbalColor   = Camouflage::Summer::First::GIMBAL;
-						currentCamouflage.textColor     = Camouflage::Summer::First::TEXT;
-						currentCamouflage.tireColor     = Camouflage::Summer::First::TIRE;
-						currentCamouflage.wheelColor    = Camouflage::Summer::First::WHEEL;
-						currentCamouflage.windowColor   = Camouflage::Summer::First::WINDOW;
+						currentCamouflage.awningColor   = camouflage::summer::First::AWNING;
+						currentCamouflage.boardColor    = camouflage::summer::First::BOARD;
+						currentCamouflage.cabColor      = camouflage::summer::First::CAB;
+						currentCamouflage.frameColor    = camouflage::summer::First::FRAME;
+						currentCamouflage.frontEndColor = camouflage::summer::First::FRONT_END;
+						currentCamouflage.gimbalColor   = camouflage::summer::First::GIMBAL;
+						currentCamouflage.textColor     = camouflage::summer::First::TEXT;
+						currentCamouflage.tireColor     = camouflage::summer::First::TIRE;
+						currentCamouflage.wheelColor    = camouflage::summer::First::WHEEL;
+						currentCamouflage.windowColor   = camouflage::summer::First::WINDOW;
 					}
-					else if (camouflageStatus == parade::Camouflage::WINTER) {
+					else if (camouflageStatus == parade::сamouflage::WINTER) {
 
-						currentCamouflage.awningColor   = Camouflage::Winter::First::AWNING;
-						currentCamouflage.boardColor    = Camouflage::Winter::First::BOARD;
-						currentCamouflage.cabColor      = Camouflage::Winter::First::CAB;
-						currentCamouflage.frameColor    = Camouflage::Winter::First::FRAME;
-						currentCamouflage.frontEndColor = Camouflage::Winter::First::FRONT_END;
-						currentCamouflage.gimbalColor   = Camouflage::Winter::First::GIMBAL;
-						currentCamouflage.textColor     = Camouflage::Winter::First::TEXT;
-						currentCamouflage.tireColor     = Camouflage::Winter::First::TIRE;
-						currentCamouflage.wheelColor    = Camouflage::Winter::First::WHEEL;
-						currentCamouflage.windowColor   = Camouflage::Winter::First::WINDOW;
+						currentCamouflage.awningColor   = camouflage::winter::First::AWNING;
+						currentCamouflage.boardColor    = camouflage::winter::First::BOARD;
+						currentCamouflage.cabColor      = camouflage::winter::First::CAB;
+						currentCamouflage.frameColor    = camouflage::winter::First::FRAME;
+						currentCamouflage.frontEndColor = camouflage::winter::First::FRONT_END;
+						currentCamouflage.gimbalColor   = camouflage::winter::First::GIMBAL;
+						currentCamouflage.textColor     = camouflage::winter::First::TEXT;
+						currentCamouflage.tireColor     = camouflage::winter::First::TIRE;
+						currentCamouflage.wheelColor    = camouflage::winter::First::WHEEL;
+						currentCamouflage.windowColor   = camouflage::winter::First::WINDOW;
 					}
 				}
 
@@ -482,9 +480,9 @@ namespace parade {
 					int bulletColor = 0;
 				};
 
-				namespace Camouflage {
+				namespace camouflage {
 
-					namespace Summer {
+					namespace summer {
 
 						enum First {
 
@@ -499,7 +497,7 @@ namespace parade {
 						};
 					}
 
-					namespace Winter {
+					namespace winter {
 
 						enum First {
 
@@ -520,29 +518,29 @@ namespace parade {
 				const int x0 = 1092;
 				const int y0 = 885;
 
-				void SetCurrentCamouflage(parade::Camouflage camouflageStatus) {
+				void SetCurrentCamouflage(parade::сamouflage camouflageStatus) {
 
-					if (camouflageStatus == parade::Camouflage::SUMMER) {
+					if (camouflageStatus == parade::сamouflage::SUMMER) {
 
-						currentCamouflage.bodyColor =   Camouflage::Summer::First::BODY;
-						currentCamouflage.boomColor =   Camouflage::Summer::First::BOOM;
-						currentCamouflage.gimbalColor = Camouflage::Summer::First::GIMBAL;
-						currentCamouflage.tireColor =   Camouflage::Summer::First::TIRE;
-						currentCamouflage.wheelColor =  Camouflage::Summer::First::WHEEL;
-						currentCamouflage.textColor =   Camouflage::Summer::First::TEXT;
-						currentCamouflage.windowColor = Camouflage::Summer::First::WINDOW;
-						currentCamouflage.bulletColor = Camouflage::Summer::First::BULLET;
+						currentCamouflage.bodyColor =   camouflage::summer::First::BODY;
+						currentCamouflage.boomColor =   camouflage::summer::First::BOOM;
+						currentCamouflage.gimbalColor = camouflage::summer::First::GIMBAL;
+						currentCamouflage.tireColor =   camouflage::summer::First::TIRE;
+						currentCamouflage.wheelColor =  camouflage::summer::First::WHEEL;
+						currentCamouflage.textColor =   camouflage::summer::First::TEXT;
+						currentCamouflage.windowColor = camouflage::summer::First::WINDOW;
+						currentCamouflage.bulletColor = camouflage::summer::First::BULLET;
 					}
-					else if (camouflageStatus == parade::Camouflage::WINTER) {
+					else if (camouflageStatus == parade::сamouflage::WINTER) {
 
-						currentCamouflage.bodyColor =   Camouflage::Winter::First::BODY;
-						currentCamouflage.boomColor =   Camouflage::Winter::First::BOOM;
-						currentCamouflage.gimbalColor = Camouflage::Winter::First::GIMBAL;
-						currentCamouflage.tireColor =   Camouflage::Winter::First::TIRE;
-						currentCamouflage.wheelColor =  Camouflage::Winter::First::WHEEL;
-						currentCamouflage.textColor =   Camouflage::Winter::First::TEXT;
-						currentCamouflage.windowColor = Camouflage::Winter::First::WINDOW;
-						currentCamouflage.bulletColor = Camouflage::Winter::First::BULLET;
+						currentCamouflage.bodyColor =   camouflage::winter::First::BODY;
+						currentCamouflage.boomColor =   camouflage::winter::First::BOOM;
+						currentCamouflage.gimbalColor = camouflage::winter::First::GIMBAL;
+						currentCamouflage.tireColor =   camouflage::winter::First::TIRE;
+						currentCamouflage.wheelColor =  camouflage::winter::First::WHEEL;
+						currentCamouflage.textColor =   camouflage::winter::First::TEXT;
+						currentCamouflage.windowColor = camouflage::winter::First::WINDOW;
+						currentCamouflage.bulletColor = camouflage::winter::First::BULLET;
 					}
 				}
 
@@ -686,9 +684,9 @@ namespace parade {
 					int textColor =    0;
 				};
 
-				namespace Camouflage {
+				namespace camouflage {
 
-					namespace Summer {
+					namespace summer {
 
 						enum First {
 
@@ -704,7 +702,7 @@ namespace parade {
 						};
 					}
 
-					namespace Winter {
+					namespace winter {
 
 						enum First {
 
@@ -726,31 +724,31 @@ namespace parade {
 				const int x0 = 232;
 				const int y0 = 291;
 
-				void SetCurrentCamouflage(parade::Camouflage camouflageStatus) {
+				void SetCurrentCamouflage(parade::сamouflage camouflageStatus) {
 
-					if (camouflageStatus == parade::Camouflage::SUMMER) {
+					if (camouflageStatus == parade::сamouflage::SUMMER) {
 
-						currentCamouflage.bodyColor =    Camouflage::Summer::First::BODY;
-						currentCamouflage.bracingColor = Camouflage::Summer::First::BRACING;
-						currentCamouflage.cargoColor =   Camouflage::Summer::First::CARGO;
-						currentCamouflage.casingColor =  Camouflage::Summer::First::CASING;
-						currentCamouflage.textColor =    Camouflage::Summer::First::TEXT;
-						currentCamouflage.tireColor =    Camouflage::Summer::First::TIRE;
-						currentCamouflage.trackColor =   Camouflage::Summer::First::TRACK;
-						currentCamouflage.turretColor =  Camouflage::Summer::First::TURRET;
-						currentCamouflage.wheelColor =   Camouflage::Summer::First::WHEEL;
+						currentCamouflage.bodyColor =    camouflage::summer::First::BODY;
+						currentCamouflage.bracingColor = camouflage::summer::First::BRACING;
+						currentCamouflage.cargoColor =   camouflage::summer::First::CARGO;
+						currentCamouflage.casingColor =  camouflage::summer::First::CASING;
+						currentCamouflage.textColor =    camouflage::summer::First::TEXT;
+						currentCamouflage.tireColor =    camouflage::summer::First::TIRE;
+						currentCamouflage.trackColor =   camouflage::summer::First::TRACK;
+						currentCamouflage.turretColor =  camouflage::summer::First::TURRET;
+						currentCamouflage.wheelColor =   camouflage::summer::First::WHEEL;
 					}
-					else if (camouflageStatus == parade::Camouflage::WINTER) {
+					else if (camouflageStatus == parade::сamouflage::WINTER) {
 
-						currentCamouflage.bodyColor =    Camouflage::Winter::First::BODY;
-						currentCamouflage.bracingColor = Camouflage::Winter::First::BRACING;
-						currentCamouflage.cargoColor =   Camouflage::Winter::First::CARGO;
-						currentCamouflage.casingColor =  Camouflage::Winter::First::CASING;
-						currentCamouflage.textColor =    Camouflage::Winter::First::TEXT;
-						currentCamouflage.tireColor =    Camouflage::Winter::First::TIRE;
-						currentCamouflage.trackColor =   Camouflage::Winter::First::TRACK;
-						currentCamouflage.turretColor =  Camouflage::Winter::First::TURRET;
-						currentCamouflage.wheelColor =   Camouflage::Winter::First::WHEEL;
+						currentCamouflage.bodyColor =    camouflage::winter::First::BODY;
+						currentCamouflage.bracingColor = camouflage::winter::First::BRACING;
+						currentCamouflage.cargoColor =   camouflage::winter::First::CARGO;
+						currentCamouflage.casingColor =  camouflage::winter::First::CASING;
+						currentCamouflage.textColor =    camouflage::winter::First::TEXT;
+						currentCamouflage.tireColor =    camouflage::winter::First::TIRE;
+						currentCamouflage.trackColor =   camouflage::winter::First::TRACK;
+						currentCamouflage.turretColor =  camouflage::winter::First::TURRET;
+						currentCamouflage.wheelColor =   camouflage::winter::First::WHEEL;
 					}
 				}
 
@@ -861,9 +859,9 @@ namespace parade {
 					
 				};
 
-				namespace Camouflage {
+				namespace сamouflage {
 
-					namespace Summer {
+					namespace summer {
 
 						enum First {
 
@@ -876,7 +874,7 @@ namespace parade {
 						};
 					}
 
-					namespace Winter {
+					namespace winter {
 
 						enum First {
 
@@ -895,25 +893,25 @@ namespace parade {
 				const int x0 = 1275;
 				const int y0 = 304;
 
-				void SetCurrentCamouflage(parade::Camouflage camouflageStatus) {
+				void SetCurrentCamouflage(parade::сamouflage camouflageStatus) {
 
-					if (camouflageStatus == parade::Camouflage::SUMMER) {
+					if (camouflageStatus == parade::сamouflage::SUMMER) {
 
-						currentCamouflage.bobyColor =   Camouflage::Summer::First::BODY;
-						currentCamouflage.ironColor =   Camouflage::Summer::First::IRON;
-						currentCamouflage.starColor =   Camouflage::Summer::First::STAR;
-						currentCamouflage.tireColor =   Camouflage::Summer::First::TIRE;
-						currentCamouflage.turretColor = Camouflage::Summer::First::TURRET;
-						currentCamouflage.wheelColor =  Camouflage::Summer::First::WHEEL;
+						currentCamouflage.bobyColor =   сamouflage::summer::First::BODY;
+						currentCamouflage.ironColor =   сamouflage::summer::First::IRON;
+						currentCamouflage.starColor =   сamouflage::summer::First::STAR;
+						currentCamouflage.tireColor =   сamouflage::summer::First::TIRE;
+						currentCamouflage.turretColor = сamouflage::summer::First::TURRET;
+						currentCamouflage.wheelColor =  сamouflage::summer::First::WHEEL;
 					}
-					else if (camouflageStatus == parade::Camouflage::WINTER) {
+					else if (camouflageStatus == parade::сamouflage::WINTER) {
 
-						currentCamouflage.bobyColor =   Camouflage::Winter::First::BODY;
-						currentCamouflage.ironColor =   Camouflage::Winter::First::IRON;
-						currentCamouflage.starColor =   Camouflage::Winter::First::STAR;
-						currentCamouflage.tireColor =   Camouflage::Winter::First::TIRE;
-						currentCamouflage.turretColor = Camouflage::Winter::First::TURRET;
-						currentCamouflage.wheelColor =  Camouflage::Winter::First::WHEEL;
+						currentCamouflage.bobyColor =   сamouflage::winter::First::BODY;
+						currentCamouflage.ironColor =   сamouflage::winter::First::IRON;
+						currentCamouflage.starColor =   сamouflage::winter::First::STAR;
+						currentCamouflage.tireColor =   сamouflage::winter::First::TIRE;
+						currentCamouflage.turretColor = сamouflage::winter::First::TURRET;
+						currentCamouflage.wheelColor =  сamouflage::winter::First::WHEEL;
 					}
 				}
 
@@ -981,7 +979,7 @@ namespace parade {
 			aux_fun::beams::CreateLightBeams(x, y);
 		}
 
-		void AssebmleGAZAA(int x, int y, parade::Camouflage camouflageStatus) {
+		void AssebmleGAZAA(int x, int y, parade::сamouflage camouflageStatus) {
 
 			aux_fun::gaz_aa::SetCurrentCamouflage(camouflageStatus);
 
@@ -995,7 +993,7 @@ namespace parade {
 			aux_fun::gaz_aa::AssembleWindow(x, y);
 			aux_fun::gaz_aa::CarDrawText(x, y);
 		}
-		void AssembleT34(int x, int y, parade::Camouflage camouflageStatus) {
+		void AssembleT34(int x, int y, parade::сamouflage camouflageStatus) {
 
 			aux_fun::t_34::SetCurrentCamouflage(camouflageStatus);
 
@@ -1008,7 +1006,7 @@ namespace parade {
 			aux_fun::t_34::AssembleBody(x, y);
 			aux_fun::t_34::CarDrawText(x, y);
 		}
-		void AssembleBA3(int x, int y, parade::Camouflage camouflageStatus) {
+		void AssembleBA3(int x, int y, parade::сamouflage camouflageStatus) {
 
 			aux_fun::ba_3::SetCurrentCamouflage(camouflageStatus);
 
@@ -1020,7 +1018,7 @@ namespace parade {
 			aux_fun::ba_3::AssembleWheels(x, y);
 			aux_fun::ba_3::AssembleIron(x, y);
 		}
-		void AssembleBM13(int x, int y, parade::Camouflage camouflageStatus) {
+		void AssembleBM13(int x, int y, parade::сamouflage camouflageStatus) {
 
 			aux_fun::bm_13::SetCurrentCamouflage(camouflageStatus);
 
@@ -1289,13 +1287,13 @@ int main() {
 
 	parade::vehicles::AssembleAirDefenseSystem(491, 670);
 
-	parade::vehicles::AssebmleGAZAA(70, 820, parade::Camouflage::SUMMER);
- 	parade::vehicles::AssembleBM13(800, 820, parade::Camouflage::SUMMER);
-	parade::vehicles::AssembleBM13(1500, 820, parade::Camouflage::SUMMER);
+	parade::vehicles::AssebmleGAZAA(70, 820, parade::сamouflage::SUMMER);
+ 	parade::vehicles::AssembleBM13(800, 820, parade::сamouflage::SUMMER);
+	parade::vehicles::AssembleBM13(1500, 820, parade::сamouflage::SUMMER);
 
-	parade::vehicles::AssembleT34(200, 890, parade::Camouflage::SUMMER);
-	parade::vehicles::AssembleBA3(850, 890, parade::Camouflage::SUMMER);
-	parade::vehicles::AssembleT34(1550, 890, parade::Camouflage::SUMMER);
+	parade::vehicles::AssembleT34(200, 890, parade::сamouflage::SUMMER);
+	parade::vehicles::AssembleBA3(850, 890, parade::сamouflage::SUMMER);
+	parade::vehicles::AssembleT34(1550, 890, parade::сamouflage::SUMMER);
 
 	parade::aircraft::AssembleIL2(1000, 200);
 	parade::aircraft::AssembleIL2(100, 200);
