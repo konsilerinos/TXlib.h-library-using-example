@@ -1289,13 +1289,13 @@ int main() {
 
 	parade::vehicles::AssembleAirDefenseSystem(491, 670);
 
-	parade::vehicles::AssebmleGAZAA(70, 820, parade::Camouflage::WINTER);
- 	parade::vehicles::AssembleBM13(800, 820, parade::Camouflage::WINTER);
-	parade::vehicles::AssembleBM13(1500, 820, parade::Camouflage::WINTER);
+	parade::vehicles::AssebmleGAZAA(70, 820, parade::Camouflage::SUMMER);
+ 	parade::vehicles::AssembleBM13(800, 820, parade::Camouflage::SUMMER);
+	parade::vehicles::AssembleBM13(1500, 820, parade::Camouflage::SUMMER);
 
-	parade::vehicles::AssembleT34(200, 890, parade::Camouflage::WINTER);
-	parade::vehicles::AssembleBA3(850, 890, parade::Camouflage::WINTER);
-	parade::vehicles::AssembleT34(1550, 890, parade::Camouflage::WINTER);
+	parade::vehicles::AssembleT34(200, 890, parade::Camouflage::SUMMER);
+	parade::vehicles::AssembleBA3(850, 890, parade::Camouflage::SUMMER);
+	parade::vehicles::AssembleT34(1550, 890, parade::Camouflage::SUMMER);
 
 	parade::aircraft::AssembleIL2(1000, 200);
 	parade::aircraft::AssembleIL2(100, 200);
