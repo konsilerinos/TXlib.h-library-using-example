@@ -330,14 +330,14 @@ namespace parade {
 
 						enum First {
 
-							CAB = RGB(89, 82, 63),
+							CAB = RGB(76, 96, 43),
 							WINDOW = RGB(95, 115, 130),
-							FRONT_END = RGB(50, 50, 42),
-							GIMBAL = RGB(50, 50, 42),
-							FRAME = RGB(75, 71, 60),
-							AWNING = RGB(75, 71, 60),
-							BOARD = RGB(104, 97, 81),
-							WHEEL = RGB(34, 25, 26),
+							FRONT_END = RGB(81, 80, 58),
+							GIMBAL = RGB(21, 26, 19),
+							FRAME = RGB(53, 74, 37),
+							AWNING = RGB(62, 76, 39),
+							BOARD = RGB(76, 96, 43),
+							WHEEL = RGB(57, 80, 38),
 							TIRE = RGB(68, 63, 41),
 							TEXT = RGB(224, 224, 224)
 						};
@@ -349,8 +349,8 @@ namespace parade {
 
 							CAB = RGB(207, 204, 192),
 							WINDOW = RGB(249, 252, 248),
-							FRONT_END = RGB(207, 204, 192),
-							GIMBAL = RGB(50, 50, 42),
+							FRONT_END = RGB(71, 65, 68),
+							GIMBAL = RGB(71, 65, 68),
 							FRAME = RGB(189, 182, 171),
 							AWNING = RGB(189, 182, 171),
 							BOARD = RGB(207, 204, 192),
@@ -472,12 +472,14 @@ namespace parade {
 
 				public:
 
-					int body = 0;
-					int gimbal = 0;
-					int wheel = 0;
-					int tire = 0;
-					int boom = 0;
-					int text = 0;
+					int bodyColor = 0;
+					int gimbalColor = 0;
+					int wheelColor = 0;
+					int tireColor = 0;
+					int boomColor = 0;
+					int textColor = 0;
+					int windowColor = 0;
+					int bulletColor = 0;
 				};
 
 				namespace Camouflage {
@@ -491,7 +493,9 @@ namespace parade {
 							WHEEL = RGB(57, 80, 38),
 							TIRE = RGB(68, 63, 41),
 							BOOM = RGB(57, 74, 38),
-							TEXT = RGB(224, 224, 224)
+							TEXT = RGB(224, 224, 224),
+							WINDOW = RGB(95, 115, 130),
+							BULLET = RGB(70, 61, 30)
 						};
 					}
 
@@ -499,12 +503,14 @@ namespace parade {
 
 						enum First {
 
-							BODY = RGB(76, 96, 43),
-							GIMBAL = RGB(57, 74, 38),
-							WHEEL = RGB(57, 80, 38),
+							BODY = RGB(207, 204, 192),
+							GIMBAL = RGB(71, 65, 58),
+							WHEEL = RGB(170, 164, 157),
 							TIRE = RGB(68, 63, 41),
-							BOOM = RGB(57, 74, 38),
-							TEXT = RGB(224, 224, 224)
+							BOOM = RGB(189, 182, 171),
+							TEXT = RGB(207, 204, 192),
+							WINDOW = RGB(249, 252, 248),
+							BULLET = RGB(71, 65, 58)
 						};
 					}
 				}
@@ -518,27 +524,31 @@ namespace parade {
 
 					if (camouflageStatus == parade::Camouflage::SUMMER) {
 
-						currentCamouflage.body =   Camouflage::Summer::First::BODY;
-						currentCamouflage.boom =   Camouflage::Summer::First::BOOM;
-						currentCamouflage.gimbal = Camouflage::Summer::First::GIMBAL;
-						currentCamouflage.tire =   Camouflage::Summer::First::TIRE;
-						currentCamouflage.wheel =  Camouflage::Summer::First::WHEEL;
-						currentCamouflage.text =   Camouflage::Summer::First::TEXT;
+						currentCamouflage.bodyColor =   Camouflage::Summer::First::BODY;
+						currentCamouflage.boomColor =   Camouflage::Summer::First::BOOM;
+						currentCamouflage.gimbalColor = Camouflage::Summer::First::GIMBAL;
+						currentCamouflage.tireColor =   Camouflage::Summer::First::TIRE;
+						currentCamouflage.wheelColor =  Camouflage::Summer::First::WHEEL;
+						currentCamouflage.textColor =   Camouflage::Summer::First::TEXT;
+						currentCamouflage.windowColor = Camouflage::Summer::First::WINDOW;
+						currentCamouflage.bulletColor = Camouflage::Summer::First::BULLET;
 					}
 					else if (camouflageStatus == parade::Camouflage::WINTER) {
 
-						currentCamouflage.body =   Camouflage::Winter::First::BODY;
-						currentCamouflage.boom =   Camouflage::Winter::First::BOOM;
-						currentCamouflage.gimbal = Camouflage::Winter::First::GIMBAL;
-						currentCamouflage.tire =   Camouflage::Winter::First::TIRE;
-						currentCamouflage.wheel =  Camouflage::Winter::First::WHEEL;
-						currentCamouflage.text =   Camouflage::Winter::First::TEXT;
+						currentCamouflage.bodyColor =   Camouflage::Winter::First::BODY;
+						currentCamouflage.boomColor =   Camouflage::Winter::First::BOOM;
+						currentCamouflage.gimbalColor = Camouflage::Winter::First::GIMBAL;
+						currentCamouflage.tireColor =   Camouflage::Winter::First::TIRE;
+						currentCamouflage.wheelColor =  Camouflage::Winter::First::WHEEL;
+						currentCamouflage.textColor =   Camouflage::Winter::First::TEXT;
+						currentCamouflage.windowColor = Camouflage::Winter::First::WINDOW;
+						currentCamouflage.bulletColor = Camouflage::Winter::First::BULLET;
 					}
 				}
 
 				void AssembleLever(int x, int y) {
 
-					parade::aux_fun::SetShapeColor(currentCamouflage.gimbal);
+					parade::aux_fun::SetShapeColor(currentCamouflage.gimbalColor);
 					POINT lever[] = {
 						{x + 1486, y + 759}, {x + 1486, y + 754}, {x + 1565, y + 751}, {x + 1564, y + 746}, {x + 1476, y + 748},
 						{x + 1477, y + 759}
@@ -547,16 +557,16 @@ namespace parade {
 				}
 				void AssembleBody(int x, int y) {
 
-					parade::aux_fun::SetShapeColor(76, 96, 43);
+					parade::aux_fun::SetShapeColor(currentCamouflage.bodyColor);
 					txRectangle(x + 1343, y + 740, x + 1462, y + 797);
 					txRectangle(x + 1456, y + 758, x + 1634, y + 785);
 
-					parade::aux_fun::SetShapeColor(57, 74, 38);
+					parade::aux_fun::SetShapeColor(currentCamouflage.boomColor);
 					txRectangle(x + 1343, y + 712, x + 1383, y + 780);
 				}
 				void AssembleCab(int x, int y) {
 
-					parade::aux_fun::SetShapeColor(76, 96, 43);
+					parade::aux_fun::SetShapeColor(currentCamouflage.bodyColor);
 					POINT cab[] = {
 						{x + 1343, y + 808}, {x + 1343, y + 658}, {x + 1321, y + 635}, {x + 1212, y + 643}, {x + 1212, y + 654},
 						{x + 1215, y + 655}, {x + 1215, y + 719}, {x + 1069, y + 721}, {x + 1069, y + 789}, {x + 1142, y + 808}
@@ -565,12 +575,12 @@ namespace parade {
 				}
 				void AssembleWindow(int x, int y) {
 
-					parade::aux_fun::SetShapeColor(95, 115, 130);
+					parade::aux_fun::SetShapeColor(currentCamouflage.windowColor);
 					txRectangle(x + 1227, y + 662, x + 1299, y + 712);
 				}
 				void AssemblepPotection(int x, int y) {
 
-					parade::aux_fun::SetShapeColor(57, 74, 38);
+					parade::aux_fun::SetShapeColor(currentCamouflage.gimbalColor);
 
 					txCircle(x + 1459, y + 805, 39);
 					txCircle(x + 1604, y + 805, 39);
@@ -580,24 +590,24 @@ namespace parade {
 				}
 				void AssembleGimbal(int x, int y) {
 
-					parade::aux_fun::SetShapeColor(57, 74, 38);
+					parade::aux_fun::SetShapeColor(currentCamouflage.gimbalColor);
 					txRectangle(x + 1122, y + 797, x + 1421, y + 834);
 				}
 				void AssembleWheels(int x, int y) {
 
-					parade::aux_fun::SetShapeColor(68, 63, 41);
+					parade::aux_fun::SetShapeColor(currentCamouflage.tireColor);
 					txCircle(x + 1473, y + 834, 50);
 					txCircle(x + 1591, y + 834, 50);
 					txCircle(x + 1092, y + 834, 50);
 
-					parade::aux_fun::SetShapeColor(57, 80, 38);
+					parade::aux_fun::SetShapeColor(currentCamouflage.wheelColor);
 					txCircle(x + 1473, y + 834, 29);
 					txCircle(x + 1591, y + 834, 29);
 					txCircle(x + 1092, y + 834, 29);
 				}
 				void AssembleBoom(int x, int y) {
 
-					parade::aux_fun::SetShapeColor(76, 96, 43);
+					parade::aux_fun::SetShapeColor(currentCamouflage.bodyColor);
 
 					POINT beam_1[] = { {x + 1386, y + 660}, {x + 1364, y + 639}, {x + 1263, y + 600}, {x + 1225, y + 593} };
 					POINT beam_2[] = { {x + 1431, y + 705}, {x + 1426, y + 690}, {x + 1356, y + 623}, {x + 1346, y + 625} };
@@ -619,18 +629,18 @@ namespace parade {
 					txPolygon(beam_8, 4);
 					txPolygon(beam_9, 4);
 
-					parade::aux_fun::SetShapeColor(57, 74, 38);
+					parade::aux_fun::SetShapeColor(currentCamouflage.boomColor);
 					POINT boom[] = { {x + 1756, y + 657}, {x + 1756, y + 635}, {x + 1186, y + 573}, {x + 1183, y + 594} };
 					txPolygon(boom, 4);
 				}
 				void AssembleBoomConnections(int x, int y) {
 
-					parade::aux_fun::SetShapeColor(76, 96, 43);
+					parade::aux_fun::SetShapeColor(currentCamouflage.bodyColor);
 
 					POINT connection_1[] = { {x + 1632, y + 758}, {x + 1607, y + 728}, {x + 1581, y + 758} };
 					txPolygon(connection_1, 3);
 
-					parade::aux_fun::SetShapeColor(57, 74, 38);
+					parade::aux_fun::SetShapeColor(currentCamouflage.boomColor);
 
 					POINT connection_2[] = { {x + 1639, y + 724}, {x + 1630, y + 697}, {x + 1568, y + 717}, {x + 1577, y + 743} };
 					POINT connection_3[] = { {x + 1520, y + 650}, {x + 1522, y + 630}, {x + 1470, y + 625}, {x + 1468, y + 645} };
@@ -644,7 +654,7 @@ namespace parade {
 				}
 				void AssembleShells(int x, int y) {
 
-					parade::aux_fun::SetShapeColor(70, 61, 30);
+					parade::aux_fun::SetShapeColor(currentCamouflage.bulletColor);
 
 					POINT bullet_1[] = { {x + 1757, y + 674}, {x + 1758, y + 657}, {x + 1648, y + 645}, {x + 1630, y + 650}, {x + 1642, y + 660} };
 					POINT bullet_2[] = { {x + 1758, y + 636}, {x + 1759, y + 618}, {x + 1648, y + 606}, {x + 1627, y + 612}, {x + 1643, y + 623} };
@@ -654,19 +664,99 @@ namespace parade {
 				}
 				void CarDrawText(int x, int y) {
 
-					txSetColor(RGB(224, 224, 224));
+					parade::aux_fun::SetShapeColor(currentCamouflage.textColor);
 					txSelectFont("Verdana", 30, 0, false, true, false, false, 0);
 					txDrawText(x + 1074, y + 726, x + 1299, y + 759, "Бей фашистов!");
 				}
 			}
 			namespace t_34 {
 
+				class CurrentCamouflage {
+
+				public:
+
+					int casingColor =  0;
+					int wheelColor =   0;
+					int tireColor =    0;
+					int trackColor =   0;
+					int turretColor =  0;
+					int bodyColor =    0;
+					int cargoColor =   0;
+					int bracingColor = 0;
+					int textColor =    0;
+				};
+
+				namespace Camouflage {
+
+					namespace Summer {
+
+						enum First {
+
+							CASING =  RGB(50, 50, 42),
+							WHEEL =   RGB(52, 51, 47),
+							TIRE =    RGB(70, 61, 30),
+							TRACK =   RGB(34, 25, 26),
+							TURRET =  RGB(89, 82, 63),
+							BODY =    RGB(75, 71, 60),
+							CARGO =   RGB(104, 97, 81),
+							BRACING = RGB(96, 73, 59),
+							TEXT =    RGB(224, 224, 224)
+						};
+					}
+
+					namespace Winter {
+
+						enum First {
+
+							CASING = RGB(177, 173, 166),
+							WHEEL = RGB(170, 164, 157),
+							TIRE = RGB(70, 61, 30),
+							TRACK = RGB(34, 25, 26),
+							TURRET = RGB(195, 192, 183),
+							BODY = RGB(189, 182, 171),
+							CARGO = RGB(177, 173, 166),
+							BRACING = RGB(96, 73, 59),
+							TEXT = RGB(195, 192, 183)
+						};
+					}
+				}
+
+				CurrentCamouflage currentCamouflage;
+
 				const int x0 = 232;
 				const int y0 = 291;
 
+				void SetCurrentCamouflage(parade::Camouflage camouflageStatus) {
+
+					if (camouflageStatus == parade::Camouflage::SUMMER) {
+
+						currentCamouflage.bodyColor =    Camouflage::Summer::First::BODY;
+						currentCamouflage.bracingColor = Camouflage::Summer::First::BRACING;
+						currentCamouflage.cargoColor =   Camouflage::Summer::First::CARGO;
+						currentCamouflage.casingColor =  Camouflage::Summer::First::CASING;
+						currentCamouflage.textColor =    Camouflage::Summer::First::TEXT;
+						currentCamouflage.tireColor =    Camouflage::Summer::First::TIRE;
+						currentCamouflage.trackColor =   Camouflage::Summer::First::TRACK;
+						currentCamouflage.turretColor =  Camouflage::Summer::First::TURRET;
+						currentCamouflage.wheelColor =   Camouflage::Summer::First::WHEEL;
+					}
+					else if (camouflageStatus == parade::Camouflage::WINTER) {
+
+						currentCamouflage.bodyColor =    Camouflage::Winter::First::BODY;
+						currentCamouflage.bracingColor = Camouflage::Winter::First::BRACING;
+						currentCamouflage.cargoColor =   Camouflage::Winter::First::CARGO;
+						currentCamouflage.casingColor =  Camouflage::Winter::First::CASING;
+						currentCamouflage.textColor =    Camouflage::Winter::First::TEXT;
+						currentCamouflage.tireColor =    Camouflage::Winter::First::TIRE;
+						currentCamouflage.trackColor =   Camouflage::Winter::First::TRACK;
+						currentCamouflage.turretColor =  Camouflage::Winter::First::TURRET;
+						currentCamouflage.wheelColor =   Camouflage::Winter::First::WHEEL;
+					}
+				}
+
 				void AssembleCasing(int x, int y) {
 
-					parade::aux_fun::SetShapeColor(50, 50, 42);
+					parade::aux_fun::SetShapeColor(currentCamouflage.casingColor);
 					POINT casing[] = {
 						{x + 183, y + 253}, {x + 107, y + 208}, {x + 145, y + 170}, {x + 752, y + 170}, {x + 792, y + 185},
 						{x + 755, y + 253}
@@ -675,7 +765,7 @@ namespace parade {
 				}
 				void AssembleWheels(int x, int y) {
 
-					parade::aux_fun::SetShapeColor(70, 61, 30);
+					parade::aux_fun::SetShapeColor(currentCamouflage.tireColor);
 					txCircle(x + 159, y + 220, 26);
 					txCircle(x + 243, y + 241, 48);
 					txCircle(x + 355, y + 241, 48);
@@ -684,7 +774,7 @@ namespace parade {
 					txCircle(x + 668, y + 241, 48);
 					txCircle(x + 754, y + 226, 32);
 
-					parade::aux_fun::SetShapeColor(52, 51, 47);
+					parade::aux_fun::SetShapeColor(currentCamouflage.wheelColor);
 					txCircle(x + 159, y + 220, 11);
 					txCircle(x + 243, y + 241, 16);
 					txCircle(x + 355, y + 241, 16);
@@ -696,7 +786,7 @@ namespace parade {
 				}
 				void AssembleTrack(int x, int y) {
 
-					parade::aux_fun::SetShapeColor(34, 25, 26);
+					parade::aux_fun::SetShapeColor(currentCamouflage.trackColor);
 
 					POINT part_1[] = { {x + 151, y + 194}, {x + 149, y + 191}, {x + 131, y + 206}, {x + 134, y + 209} };
 					POINT part_2[] = { {x + 131, y + 206}, {x + 135, y + 206}, {x + 136, y + 229}, {x + 132, y + 229} };
@@ -724,7 +814,7 @@ namespace parade {
 				}
 				void AssembleTurret(int x, int y) {
 
-					parade::aux_fun::SetShapeColor(89, 82, 63);
+					parade::aux_fun::SetShapeColor(currentCamouflage.turretColor);
 					POINT turret[] = {
 						{x + 432, y + 120}, {x + 432, y + 110}, {x + 474, y + 110}, {x + 474, y + 106}, {x + 518, y + 106},
 						{x + 485, y + 51},  {x + 452, y + 51},  {x + 452, y + 41},  {x + 386, y + 41},	{x + 386, y + 51},
@@ -736,14 +826,14 @@ namespace parade {
 				}
 				void AssembleBody(int x, int y) {
 
-					parade::aux_fun::SetShapeColor(75, 71, 60);
+					parade::aux_fun::SetShapeColor(currentCamouflage.bodyColor);
 					POINT body[] = { {x + 197, y + 170}, {x + 280, y + 120}, {x + 691, y + 120}, {x + 752, y + 170} };
 					txPolygon(body, 4);
 
-					parade::aux_fun::SetShapeColor(104, 97, 81);
+					parade::aux_fun::SetShapeColor(currentCamouflage.cargoColor);
 					txRectangle(x + 432, y + 153, x + 691, y + 110);
 
-					parade::aux_fun::SetShapeColor(96, 73, 59);
+					parade::aux_fun::SetShapeColor(currentCamouflage.bracingColor);
 					txRectangle(x + 451, y + 153, x + 457, y + 110);
 					txRectangle(x + 535, y + 153, x + 541, y + 110);
 					txRectangle(x + 581, y + 153, x + 586, y + 110);
@@ -751,7 +841,7 @@ namespace parade {
 				}
 				void CarDrawText(int x, int y) {
 
-					txSetColor(RGB(224, 224, 224));
+					parade::aux_fun::SetShapeColor(currentCamouflage.textColor);
 					txSelectFont("Verdana", 40, 0, false, true, false, false, 0);
 					txDrawText(x + 344, y + 60, x + 469, y + 96, "Родина");
 				}
@@ -790,9 +880,9 @@ namespace parade {
 
 						enum First {
 
-							TURRET = RGB(189, 182, 171),
+							TURRET = RGB(177, 173, 166),
 							STAR = RGB(249, 252, 248),
-							BODY = RGB(207, 204, 192),
+							BODY = RGB(195, 192, 183),
 							WHEEL = RGB(170, 164, 157),
 							TIRE = RGB(68, 63, 41),
 							IRON = RGB(189, 182, 171)
@@ -905,7 +995,9 @@ namespace parade {
 			aux_fun::gaz_aa::AssembleWindow(x, y);
 			aux_fun::gaz_aa::CarDrawText(x, y);
 		}
-		void AssembleT34(int x, int y) {
+		void AssembleT34(int x, int y, parade::Camouflage camouflageStatus) {
+
+			aux_fun::t_34::SetCurrentCamouflage(camouflageStatus);
 
 			parade::aux_fun::ChangeCoordinates(x, y, aux_fun::t_34::x0, aux_fun::t_34::y0);
 
@@ -1192,18 +1284,18 @@ int main() {
 	parade::buildings::BuildTower(916, 780);
 	parade::buildings::BuildMausoleum(901, 780);
 
-	//parade::vehicles::AssembleAirDefenseSystem(491, 670);
+	parade::vehicles::AssembleAirDefenseSystem(491, 670);
 
-	//parade::vehicles::AssebmleGAZAA(70, 820, parade::Camouflage::SUMMER);
+	parade::vehicles::AssebmleGAZAA(70, 820, parade::Camouflage::SUMMER);
  	parade::vehicles::AssembleBM13(800, 820, parade::Camouflage::SUMMER);
 	parade::vehicles::AssembleBM13(1500, 820, parade::Camouflage::SUMMER);
 
-	//parade::vehicles::AssembleT34(200, 890);
-	//parade::vehicles::AssembleBA3(850, 890, parade::Camouflage::SUMMER);
-	//parade::vehicles::AssembleT34(1550, 890);
+	parade::vehicles::AssembleT34(200, 890, parade::Camouflage::SUMMER);
+	parade::vehicles::AssembleBA3(850, 890, parade::Camouflage::SUMMER);
+	parade::vehicles::AssembleT34(1550, 890, parade::Camouflage::SUMMER);
 
-	//parade::aircraft::AssembleIL2(1000, 200);
-	//parade::aircraft::AssembleIL2(100, 200);
+	parade::aircraft::AssembleIL2(1000, 200);
+	parade::aircraft::AssembleIL2(100, 200);
 
 	return 0;
 }
