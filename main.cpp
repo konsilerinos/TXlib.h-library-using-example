@@ -2,7 +2,7 @@
 
 int main() {
 
-	txCreateWindow(1800, 900);
+	parade::CreateParadeWindow();
 
 	parade::environment::CreateEnvironment();
 
@@ -15,13 +15,15 @@ int main() {
 
 	parade::vehicles::AssembleAirDefenseSystem(491, 670);
 
-	parade::vehicles::AssebmleGAZAA(70, 820, parade::сamouflage::SUMMER);
-	parade::vehicles::AssembleBM13(800, 820, parade::сamouflage::SUMMER);
-	parade::vehicles::AssembleBM13(1500, 820, parade::сamouflage::SUMMER);
+	parade::сamouflage currentCamouflage = parade::сamouflage::SUMMER;
 
-	parade::vehicles::AssembleT34(200, 890, parade::сamouflage::SUMMER);
-	parade::vehicles::AssembleBA3(850, 890, parade::сamouflage::SUMMER);
-	parade::vehicles::AssembleT34(1550, 890, parade::сamouflage::SUMMER);
+	parade::vehicles::AssebmleGAZAA(70, 820, currentCamouflage);
+	parade::vehicles::AssembleBM13(800, 820, currentCamouflage);
+	parade::vehicles::AssembleBM13(1500, 820, currentCamouflage);
+
+	parade::vehicles::AssembleT34(200, 890, currentCamouflage);
+	parade::vehicles::AssembleBA3(850, 890, currentCamouflage);
+	parade::vehicles::AssembleT34(1550, 890, currentCamouflage);
 
 	parade::aircraft::AssembleIL2(1000, 200);
 	parade::aircraft::AssembleIL2(100, 200);
