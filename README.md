@@ -31,6 +31,10 @@
 
 ![изображение](https://user-images.githubusercontent.com/78896451/111760149-6def8480-88af-11eb-95f0-12a7a9f2bd74.png)
 
+Добавлена анимация:
+
+![Анимация](https://user-images.githubusercontent.com/78896451/112984135-2dbdbb00-9167-11eb-9640-3e67ebb9720f.gif)
+
 Центры систем координат относительно объектов помечены красным кругом.
 
 ![изображение](https://user-images.githubusercontent.com/78896451/111069307-7b86c200-84dd-11eb-9a53-0b74afebfd79.png)
